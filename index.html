@@ -5,23 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Windows Tools</title>
     <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <script>
+        // Function to open links in a new window with specific dimensions
+        function openInNewWindow(event, width, height) {
+            event.preventDefault();
+            var url = event.currentTarget.href;
+            window.open(url, 'newwindow', `width=${width},height=${height}`);
+        }
+
+        // Add event listener to specific links with their respective dimensions
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('a[href="https://www.makewordart.com/"]').addEventListener('click', function(event) {
+                openInNewWindow(event, 1000, 700);
+            });
+            document.querySelector('a[href="https://jspaint.app/"]').addEventListener('click', function(event) {
+                openInNewWindow(event, 775, 500);
+            });
+            document.querySelector('a[href="https://imrane03.github.io/better-sam/"]').addEventListener('click', function(event) {
+                openInNewWindow(event, 500, 550);
+            });
+            document.querySelector('a[href="https://alula.github.io/SpaceCadetPinball/"]').addEventListener('click', function(event) {
+                openInNewWindow(event, 610, 500);
+            });
+            document.querySelector('a[href="https://minesweeper.one/"]').addEventListener('click', function(event) {
+                openInNewWindow(event, 350, 480);
+            });
+        });
+    </script>
 </head>
 <body>
     <img src="Taskbar.png" alt="Taskbar" style="width: 100%; height: auto; position: absolute; bottom: 0; left: 0;">
     <div class="WordArt">
-        <a href="https://www.makewordart.com/" target="_blank"><img src="WordArt.png" alt="Make Word Art" style="width: 5%; height: auto;"></a>
+        <a href="https://www.makewordart.com/"><img src="WordArt.png" alt="Make Word Art" style="width: 5%; height: auto;"></a>
     </div>
     <div class="Paint">
-        <a href="https://jspaint.app/" target="_blank"><img src="JsPaint.png" alt="Paint" style="width: 5%; height: auto;"></a>
+        <a href="https://jspaint.app/"><img src="JsPaint.png" alt="Paint" style="width: 5%; height: auto;"></a>
     </div>
     <div class="Sam">
-        <a href="https://imrane03.github.io/better-sam/" target="_blank"><img src="SAM.png" alt="SAM" style="width: 5%; height: auto;"></a>
+        <a href="https://imrane03.github.io/better-sam/"><img src="SAM.png" alt="SAM" style="width: 5%; height: auto;"></a>
     </div>
     <div class="PinBall">
-        <a href="https://alula.github.io/SpaceCadetPinball/" target="_blank"><img src="PinBall.png" alt="Space Cadet Pinball" style="width: 5%; height: auto;"></a>
+        <a href="https://alula.github.io/SpaceCadetPinball/"><img src="PinBall.png" alt="Space Cadet Pinball" style="width: 5%; height: auto;"></a>
     </div>
     <div class="MineSweeper">
-        <a href="https://minesweeper.one/" target="_blank"><img src="MineSweeper.png" alt="MineSweeper" style="width: 5%; height: auto;"></a>
+        <a href="https://minesweeper.one/"><img src="MineSweeper.png" alt="MineSweeper" style="width: 5%; height: auto;"></a>
     </div>    
 </body>
 <style>
